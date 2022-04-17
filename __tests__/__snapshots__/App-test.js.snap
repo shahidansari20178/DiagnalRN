@@ -1,0 +1,574 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Case for component Test App Header Mock Test for App headee 1`] = `
+<View
+  style={
+    Object {
+      "height": 90,
+      "width": 750,
+    }
+  }
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": 90,
+        "width": 750,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/assets/nav_bar.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": 90,
+            "width": 750,
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      hitSlop={
+        Object {
+          "bottom": 20,
+          "left": 20,
+          "right": 20,
+          "top": 20,
+        }
+      }
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "opacity": 1,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/Back.png",
+          }
+        }
+        style={
+          Object {
+            "height": 37.5,
+            "resizeMode": "contain",
+            "width": 60,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 16,
+            "fontWeight": "500",
+            "marginHorizontal": 15,
+          }
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "testUri": "../../../src/assets/search.png",
+            }
+          }
+          style={
+            Object {
+              "height": 45,
+              "resizeMode": "contain",
+              "width": 75,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Test Case for component Test image component Mock Test for image component 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Array [
+          Object {
+            "position": "relative",
+          },
+          undefined,
+        ],
+      ]
+    }
+  >
+    <FastImageView
+      onFastImageError={[Function]}
+      onFastImageLoadEnd={[Function]}
+      resizeMode="cover"
+      source={
+        Object {
+          "priority": "normal",
+          "uri": undefined,
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 0,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "height": 100,
+              "justifyContent": "center",
+              "resizeMode": "contain",
+              "width": 100,
+            },
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+    >
+      <FastImageView
+        resizeMode="cover"
+        source={
+          Object {
+            "testUri": "../../../src/assets/placeholder_for_missing_posters.png",
+          }
+        }
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Test Case for component Test marquee text component Mock Test for marquee text component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "overflow": "hidden",
+      },
+      Object {
+        "flex": undefined,
+      },
+    ]
+  }
+>
+  <Text
+    animationType="auto"
+    bounce={true}
+    bounceDelay={0}
+    bounceSpeed={50}
+    easing={[Function]}
+    isInteraction={true}
+    loop={true}
+    marqueeDelay={0}
+    marqueeOnMount={true}
+    numberOfLines={1}
+    scrollSpeed={150}
+    style={
+      Array [
+        Object {},
+        Object {
+          "opacity": 0,
+        },
+      ]
+    }
+    useNativeDriver={true}
+  />
+  <RCTScrollView
+    display="flex"
+    horizontal={true}
+    onContentSizeChange={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    scrollEnabled={false}
+    scrollEventThrottle={16}
+    showsHorizontalScrollIndicator={false}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        false,
+      ]
+    }
+  >
+    <View>
+      <Text
+        animationType="auto"
+        bounce={true}
+        bounceDelay={0}
+        bounceSpeed={50}
+        collapsable={false}
+        easing={[Function]}
+        forwardedRef={[Function]}
+        isInteraction={true}
+        loop={true}
+        marqueeDelay={0}
+        marqueeOnMount={true}
+        numberOfLines={1}
+        scrollSpeed={150}
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+            "width": null,
+          }
+        }
+        useNativeDriver={true}
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`Test Case for component Test movie list Mock Test for empty movie list 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+      "marginTop": "30%",
+    }
+  }
+>
+  <ActivityIndicator
+    color="#ffF"
+    size="large"
+  />
+  <Text
+    style={
+      Object {
+        "color": "#DCDCDC",
+        "fontFamily": "TitilliumWeb-Light",
+        "fontSize": 60,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Searching....
+  </Text>
+</View>
+`;
+
+exports[`Test Case for component Test movie list Mock Test for movie list item 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 26.5,
+      "marginLeft": 19,
+      "marginTop": 19,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "position": "relative",
+            },
+            Object {
+              "height": 337.5,
+              "width": 225,
+            },
+          ],
+        ]
+      }
+    >
+      <FastImageView
+        onFastImageError={[Function]}
+        onFastImageLoadEnd={[Function]}
+        resizeMode="cover"
+        source={null}
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 0,
+          },
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Array [
+              Object {
+                "alignItems": "center",
+                "height": 100,
+                "justifyContent": "center",
+                "resizeMode": "contain",
+                "width": 100,
+              },
+              undefined,
+              Object {
+                "height": 337.5,
+                "width": 225,
+              },
+            ],
+          ]
+        }
+      >
+        <FastImageView
+          resizeMode="cover"
+          source={
+            Object {
+              "testUri": "../../../src/assets/placeholder_for_missing_posters.png",
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "width": 225,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "flex": undefined,
+          },
+        ]
+      }
+    >
+      <Text
+        animationType="auto"
+        bounce={true}
+        bounceDelay={0}
+        bounceSpeed={50}
+        duration={3000}
+        easing={[Function]}
+        isInteraction={true}
+        loop={true}
+        marqueeDelay={1000}
+        marqueeOnMount={true}
+        numberOfLines={1}
+        scrollSpeed={150}
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+              "fontFamily": "TitilliumWeb-Light",
+              "fontSize": 14,
+              "fontWeight": "300",
+              "marginHorizontal": 2.5,
+              "marginVertical": 11.5,
+            },
+            Object {
+              "opacity": 0,
+            },
+          ]
+        }
+        useNativeDriver={true}
+      />
+      <RCTScrollView
+        display="flex"
+        horizontal={true}
+        onContentSizeChange={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        scrollEnabled={false}
+        scrollEventThrottle={16}
+        showsHorizontalScrollIndicator={false}
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            false,
+          ]
+        }
+      >
+        <View>
+          <Text
+            animationType="auto"
+            bounce={true}
+            bounceDelay={0}
+            bounceSpeed={50}
+            collapsable={false}
+            duration={3000}
+            easing={[Function]}
+            forwardedRef={[Function]}
+            isInteraction={true}
+            loop={true}
+            marqueeDelay={1000}
+            marqueeOnMount={true}
+            numberOfLines={1}
+            scrollSpeed={150}
+            style={
+              Object {
+                "color": "#fff",
+                "fontFamily": "TitilliumWeb-Light",
+                "fontSize": 14,
+                "fontWeight": "300",
+                "marginHorizontal": 2.5,
+                "marginVertical": 11.5,
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+                "width": null,
+              }
+            }
+            useNativeDriver={true}
+          />
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>
+</View>
+`;

@@ -1,0 +1,15 @@
+export default {
+  backArrow: require('../assets/Back.png'),
+  navBar: require('../assets/nav_bar.png'),
+  searchIcon: require('../assets/search.png'),
+  poster1: require('../assets/poster1.jpg'),
+  poster2: require('../assets/poster2.jpg'),
+  poster3: require('../assets/poster3.jpg'),
+  poster4: require('../assets/poster4.jpg'),
+  poster5: require('../assets/poster5.jpg'),
+  poster6: require('../assets/poster6.jpg'),
+  poster7: require('../assets/poster7.jpg'),
+  poster8: require('../assets/poster8.jpg'),
+  poster9: require('../assets/poster9.jpg'),
+  placeholder: require('../assets/placeholder_for_missing_posters.png'),
+};
