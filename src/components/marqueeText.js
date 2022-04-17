@@ -237,7 +237,6 @@ export default class TextMarquee extends PureComponent {
             const nodeHandle = findNodeHandle(node);
             if (nodeHandle) {
               UIManager.measure(nodeHandle, (x, y, w) => {
-                // console.log('Width: ' + w)
                 return resolve(w)
               })
             } else {
@@ -253,7 +252,6 @@ export default class TextMarquee extends PureComponent {
         this.textWidth = textWidth
         this.distance = textWidth - containerWidth + shouldAnimateTreshold
 
-        // console.log(`distance: ${this.distance}, contentFits: ${this.state.contentFits}`)
         resolve({
           // Is 1 instead of 0 to get round rounding errors from:
           // https://github.com/facebook/react-native/commit/a534672

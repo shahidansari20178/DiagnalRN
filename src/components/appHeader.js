@@ -13,10 +13,14 @@ import { widthPercentageToDP as wp } from '../appHelper/responsiveHelper';
 import PropTypes from 'prop-types';
 import colorHelper from '../appHelper/colorHelper'
 
-const AppHeader = ({ title = '', searchText = '', setSearchText = null, navigation = null }) => {
+const AppHeader = ({ title = '', searchText = '', onCancel = null, setSearchText = null, navigation = null }) => {
   const [showSearchTextBox, setShowSearchTextBox] = useState(false);
-  navigation
-  debugger
+
+  const onClickCancel = () => {
+    setShowSearchTextBox(false);
+   searchText !== "" &&  setSearchText?.("");
+  };
+
   return (
     <View style={styles.headerContainer}>
       <ImageBackground
@@ -40,10 +44,9 @@ const AppHeader = ({ title = '', searchText = '', setSearchText = null, navigati
                 keyboardType={'web-search'}
                 onChangeText={text => setSearchText(text)}
                 style={styles.searchTextBox}
-                onBlur={() => setShowSearchTextBox(false)}
                 placeholder={'Search...'}
               />
-              <TouchableOpacity onPress={() => setShowSearchTextBox(false)} style={{ backgroundColor: '#DCDCDC', paddingHorizontal: wp(2), paddingVertical: wp(1.5), borderRadius: wp(5) }}>
+              <TouchableOpacity onPress={onClickCancel} style={{ backgroundColor: '#DCDCDC', paddingHorizontal: wp(2), paddingVertical: wp(1.5), borderRadius: wp(5) }}>
                 <Text style={{ color: '#000', fontSize: 10 }}>X</Text>
               </TouchableOpacity>
             </View>
@@ -63,7 +66,7 @@ const AppHeader = ({ title = '', searchText = '', setSearchText = null, navigati
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: wp(12),
+    height: wp(14),
     width: wp(100),
   },
   backArrowImage: {
@@ -73,7 +76,7 @@ const styles = StyleSheet.create({
   },
   navBarContainer: {
     width: wp(100),
-    height: wp(12),
+    height: wp(14),
     alignItems: 'center',
     flexDirection: 'row',
   },
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp(2),
     backgroundColor: colorHelper.gray,
     width: wp(80),
-    height: wp(8),
+    height: wp(10),
   }
 })
 
@@ -102,6 +105,7 @@ AppHeader.propTypes = {
   title: PropTypes.string,
   searchText: PropTypes.string,
   setSearchText: PropTypes.func,
+  onCancel: PropTypes.func,
 };
 
 export default memo(AppHeader);

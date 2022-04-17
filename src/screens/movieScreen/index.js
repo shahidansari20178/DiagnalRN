@@ -3,42 +3,42 @@ import {
   SafeAreaView,
   View,
   FlatList,
+  ActivityIndicator
 } from 'react-native';
 import MoviePosterItem from '../../components/movieList/moviePosterItem';
 import MovieEmptyList from '../../components/movieList/movieEmptyList';
 import AppHeader from '../../components/appHeader';
 import debounce from 'lodash.debounce';
 import styles from './styles';
+import colorHelper from '../../appHelper/colorHelper';
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
+
   const [movieList, setMovieList] = useState({});
   const [searchText, setSearchText] = useState('');
   const [searchedList, setSearchedList] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     //fetch initial movie list
     fetchMovie();
   }, []);
 
-  // call when search text and movie list changed
-  React.useEffect(() => {
-    setLoading(true);
-    // set debounce 700ms for reduce unnecessary api call
-    debouncedFetchData(searchText, res => {
+  const onChangeText = (text) => {
+    setSearchText(text);
+    debouncedFetchData(text, res => {
       if (searchText !== '') {
         setSearchedList(res);
       } else {
-        setSearchedList(movieList?.['content-items']?.['content']);
+        Object.values(movieList).length > 0 && setSearchedList(movieList?.['content-items']?.['content']);
       }
       setLoading(false);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchText, movieList]);
+  }
 
   const searchMovie = (query, cb) => {
     const res = movieList?.['content-items']?.['content']?.filter(i =>
-      i?.name?.toLowerCase()?.includes(query?.toLowerCase()),
+      i?.name?.toLowerCase()?.match(query?.toLowerCase()),
     );
     cb(res);
   };
@@ -74,7 +74,9 @@ const Home = ({navigation}) => {
       },
     };
     setMovieList(tList);
+    setSearchedList(tList['content-items']?.content || []);
     setLoading(false);
+    
   };
 
   const onMoreLoad = () => {
@@ -87,12 +89,17 @@ const Home = ({navigation}) => {
     }
   };
 
+  const renderMovieItem = ({ item }) => (
+    <MoviePosterItem item={item} />
+  );
+
   return (
     <SafeAreaView style={styles.container}>
       <AppHeader
         title={movieList?.title || ""}
         searchText={searchText}
-        setSearchText={setSearchText}
+        setSearchText={(text)=>onChangeText(text)}
+        onCancel={()=>fetchMovie(1)}
         navigation={navigation}
       />
       <View style={{ flex: 1 }}>
@@ -101,15 +108,14 @@ const Home = ({navigation}) => {
           extraData={searchedList}
           data={searchedList}
           initialNumToRender={10}
-          removeClippedSubviews={20}
-          ListEmptyComponent={() => <MovieEmptyList isLoading={isLoading} />}
+          removeClippedSubviews={true}
+          ListEmptyComponent={() => <MovieEmptyList searchedList={searchedList} isLoading={isLoading} />}
+          ListFooterComponent={() => (isLoading && searchedList?.length > 0) && <ActivityIndicator size={'large'} color={colorHelper.gray} />}
           numColumns={3}
           keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => (
-            <MoviePosterItem item={item} />
-          )}
+          renderItem={renderMovieItem}
           onEndReached={() => searchText === "" && onMoreLoad()}
-          onEndReachedThreshold={0.7}
+          onEndReachedThreshold={0.6}
         />
       </View>
     </SafeAreaView>
